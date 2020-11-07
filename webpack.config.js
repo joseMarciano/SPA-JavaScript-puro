@@ -1,5 +1,5 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
-
 module.exports = {
     mode: "development", // moodo de desenvolvimento
     devServer: {
@@ -10,5 +10,11 @@ module.exports = {
     output: {
         filename: "main.js", // nome do arquivo bundle que será gerado
         path: path.resolve(__dirname, "dist") // pasta que será gerado o bundle
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: "./src/clientes.html",
+            filename: "index.html"
+        })
+    ]
 }
