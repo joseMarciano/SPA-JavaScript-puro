@@ -16,5 +16,11 @@ module.exports = {
             template: "./src/clientes.html",
             filename: "index.html"
         })
-    ]
+    ],
+    module: {
+        rules: [{
+            test: /\.css$/i, //identificação de arquivos .css com REGEXP
+            use: ["style-loader", "css-loader"]
+        }]
+    }
 }
