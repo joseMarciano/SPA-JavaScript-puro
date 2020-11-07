@@ -29,7 +29,7 @@
 ![alt text](img-readme/client-img.png)
 
 
-#Etapas concluídas 
+# Etapas concluídas 
 [x] Aprender como configurar o webpack.
 [ ] Manipular o DOM para criar um sistema de rotas.
 [ ] Criar uma single page application utilizando Javascript puro.
