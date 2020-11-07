@@ -1,11 +1,11 @@
-
+import { deletaCliente, listarClientes } from '../../api/cliente.js';
 
 const removeCliente = (id) => {
-  if(confirm("Deseja deletar o cliente ?")){
-    debugger;
-    deletaCliente(id)
-    window.location.reload()
-  }
+    if (confirm("Deseja deletar o cliente ?")) {
+        debugger;
+        deletaCliente(id)
+        window.location.reload()
+    }
 }
 
 const corpoTabela = document.querySelector("[data-conteudo-tabela]");
@@ -23,19 +23,15 @@ const exibeCliente = (cpf, nome, id) => {
     
     
 `
-  
+
     linha.innerHTML = conteudoLinha;
     return linha;
-  };
-  
-  listarClientes().then( exibe => {
-  exibe.forEach(indice => {
-    corpoTabela.appendChild(exibeCliente(indice.cpf, indice.nome, indice.id))
-  })
- }
+};
 
- )
-  
-  
- 
+listarClientes().then(exibe => {
+        exibe.forEach(indice => {
+            corpoTabela.appendChild(exibeCliente(indice.cpf, indice.nome, indice.id))
+        })
+    }
 
+)
