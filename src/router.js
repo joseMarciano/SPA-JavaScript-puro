@@ -1,11 +1,13 @@
 import inicializaCadastro from './componentes/cadastro/componente-cadastro.js';
+import inicializaTabela from './componentes/lista/listagem-cliente.js';
 
 
 const rotas = {
+    "/": inicializaTabela,
     "/cadastro": inicializaCadastro
 }
 
-const rootDiv = documento.querySelector('[data-container]');
+const rootDiv = document.querySelector('[data-container]');
 
 const navegacao = (pathName) => {
     window.history.pushState({}, pathName, window.location.origin + pathName);
@@ -16,4 +18,10 @@ const navegacao = (pathName) => {
     rootDiv.appendChild(iniciarRota());
 }
 
+window.navegacao = navegacao;
+
+window.onpopstate = () => {
+    rootDiv.innerHTML = "";
+    rootDiv.appendChild(rotas[window.location.pathname]());
+}
 export { navegacao };
