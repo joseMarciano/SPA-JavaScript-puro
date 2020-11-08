@@ -22,6 +22,7 @@ const inicializaCadastro = () => {
 
     const container = document.querySelector('[data-container]');
     eventoEnvia(form);
+    container.innerHTML = "";
     container.appendChild(form);
 
     return form;

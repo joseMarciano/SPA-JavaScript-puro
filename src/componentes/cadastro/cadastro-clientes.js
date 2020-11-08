@@ -3,9 +3,9 @@ import { cadastrarClientes } from '../../api/cliente.js';
 
 
 const eventoEnvia = (form) => {
-    const formCadastroCliente = document.querySelector("[data-form]")
 
-    formCadastroCliente.addEventListener("submit",
+
+    form.addEventListener("submit",
         event => {
             event.preventDefault()
 

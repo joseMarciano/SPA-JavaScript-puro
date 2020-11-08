@@ -31,6 +31,14 @@ tabela.innerHTML = conteudo;
 tabela.classList.add("table");
 
 container.appendChild(tabela);
+const novoClienteButtom = document.querySelector('.btn');
+debugger
+
+novoClienteButtom.addEventListener('click', () => {
+    debugger
+    inicializaCadastro();
+})
+
 const corpoTabela = document.createElement('tbody');
 
 const exibeCliente = (cpf, nome, id) => {
