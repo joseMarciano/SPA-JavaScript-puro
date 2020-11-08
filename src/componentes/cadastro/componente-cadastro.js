@@ -1,8 +1,11 @@
 import eventoEnvia from './cadastro-clientes.js';
 
-const form = document.createElement('form');
 
-const cadastro = `
+
+const inicializaCadastro = () => {
+
+    const form = document.createElement('form');
+    const cadastro = `
     <div class="container">
         <div class="form-group">
             <label>CPF</label>
@@ -16,15 +19,10 @@ const cadastro = `
     </div>
     `;
 
-form.innerHTML = cadastro;
+    form.innerHTML = cadastro;
 
-const inicializaCadastro = () => {
 
-    const container = document.querySelector('[data-container]');
     eventoEnvia(form);
-    container.innerHTML = "";
-    container.appendChild(form);
-
     return form;
 }
 
