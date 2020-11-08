@@ -31,10 +31,10 @@
 
 # Etapas concluídas 
 - [x] Aprender como configurar o webpack.
-- [ ] Manipular o DOM para criar um sistema de rotas.
-- [ ] Criar uma single page application utilizando Javascript puro.
-- [ ] Utilizar o sistema de módulos do Javascript para proteger os arquivos.
-- [ ] Trabalhar com componetização para facilitar a organização do projeto.
+- [x] Manipular o DOM para criar um sistema de rotas.
+- [x] Criar uma single page application utilizando Javascript puro.
+- [x] Utilizar o sistema de módulos do Javascript para proteger os arquivos.
+- [x] Trabalhar com componetização para facilitar a organização do projeto.
 
 
 #### Este projeto é baseado no curso de Java Script da Alura 
