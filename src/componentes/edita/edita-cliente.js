@@ -7,9 +7,9 @@ const eventoForm = (form) => {
 
     const id = pegaURL.searchParams.get('id')
 
-    const inputCPF = document.querySelector('[data-cpf]')
-    const inputNome = document.querySelector('[data-nome]')
-
+    const inputCPF = form.querySelector('[data-cpf]')
+    const inputNome = form.querySelector('[data-nome]')
+    debugger
     detalhaCliente(id).then(dados => {
         inputCPF.value = dados[0].cpf
         inputNome.value = dados[0].nome
