@@ -1,3 +1,5 @@
+import eventoForm from "../edita/edita-cliente.js";
+
 const inicializaFormEdicao = () => {
     const form = document.createElement('form');
     const formEdicao = `
@@ -16,6 +18,10 @@ const inicializaFormEdicao = () => {
     `;
 
     form.innerHTML = formEdicao;
+
+    eventoForm(form);
+
+    return form;
 }
 
 export default inicializaFormEdicao;
